@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz and Result System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="start-screen" class="card">
+      <h1>Online Quiz</h1>
+      <p>Test your basic computer science knowledge.</p>
+      <label for="student-name">Your name</label>
+      <input id="student-name" type="text" maxlength="40" placeholder="Enter your name">
+      <button id="start-btn">Start Quiz</button>
+      <p id="start-error" class="error"></p>
+    </section>
+
+    <section id="quiz-screen" class="card hidden">
+      <div class="topbar">
+        <span id="question-number"></span>
+        <span id="timer">Time: 60s</span>
+      </div>
+      <div class="progress"><div id="progress-bar"></div></div>
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <button id="next-btn" disabled>Next</button>
+    </section>
+
+    <section id="result-screen" class="card hidden">
+      <h1>Quiz Result</h1>
+      <p id="result-name"></p>
+      <div class="score" id="score"></div>
+      <p id="message"></p>
+      <button id="restart-btn">Try Again</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
